@@ -1,3 +1,44 @@
-.seccionHome{
-    background-color: black;
+.seccionHero{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: var(--color-bg-oscuro);
+    position: relative;
+    overflow: hidden;
+}
+
+.seccionHero::before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  top: -40%;
+  left: -40%;
+  z-index: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(44, 186, 125, 0.18),
+    rgba(0, 255, 21, 0.06),
+    transparent 70%
+  );
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.contenidoTextImg{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    color: var(--color-fonts);
+}
+.textoHero{
+    max-width: 500px;
+}
+
+.imgHero img{
+    width: 300px;
+    height: auto;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
 }

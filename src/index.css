@@ -1,6 +1,8 @@
 :root {
   --color-bg: #EAFAF4;
-  --color-bg-oscuro: #071D14;
+  --color-bg-oscuro: #0B1F16;
+  --color-fonts: #ffffff;
+  --font-family-base: 'Nunito', sans-serif;
 }
 
 * {

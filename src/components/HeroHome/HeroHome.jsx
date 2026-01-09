@@ -1,4 +1,5 @@
 import "./HeroHome.css";
+import heroImage from '../../assets/Chanchitobro.png';
 
 const HeroHome = () => {
     return (
@@ -13,7 +14,9 @@ Te ayudamos a ver en qué gastas y cómo puedes ahorrar sin esfuerzo</h1>
                         <a href=""></a>
                     </div>
                 </div>
-                <div className="imgHero"></div>
+                <div className="imgHero">
+                    <img src={heroImage} alt="Hero Image"/>
+                </div>
             </div>
         </section>
     );
