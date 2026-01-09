@@ -1,21 +1,20 @@
 import "./HeroHome.css";
-import heroImage from '../../assets/Chanchitobro.png';
 
 const HeroHome = () => {
     return (
         <section className="seccionHero">
             <div className="contenidoTextImg">
                 <div className="textoHero">
-                    <h1>Bienvenido Mi Chanchit@ Tu dinero, más claro que nunca
-Te ayudamos a ver en qué gastas y cómo puedes ahorrar sin esfuerzo</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum dignissim risus et tristique. Ut ullamcorper volutpat velit, ut elementum sapien tempus a. Nulla facilisi. Vivamus pulvinar massa ante, vel aliquet augue placerat in. Nulla in ipsum in felis fringilla bibendum quis sit amet sem. Duis tincidunt nisl tellus, eget tempus risus lobortis in. Aenean non pulvinar diam. Proin elit eros, gravida id erat vel, maximus fermentum turpis. Nullam est ligula, ornare sed sagittis in, tempus eget turpis. Praesent et quam eu nunc scelerisque porta. Aenean feugiat lectus et rutrum elementum. Sed sed libero purus.</p>
+                    <h1>
+                        Bienvenido Mi Chanchit@ <span className="subrayado">Tu dinero, más claro que nunca</span>
+                        <br />
+                        Te ayudamos a ver en qué gastas y cómo puedes <span className="subrayado">ahorrar sin esfuerzo</span>
+                    </h1>
+                    <p>No dejes pasar estas oportunidades de ahorro.</p>
                     <div className="contenedorBotonesHero">
-                        <a href=""></a>
-                        <a href=""></a>
+                        <a className="boton-primario" href="">comenzar ahora</a>
+                        <a className="boton-secundario" href="">ver más</a>
                     </div>
-                </div>
-                <div className="imgHero">
-                    <img src={heroImage} alt="Hero Image"/>
                 </div>
             </div>
         </section>
