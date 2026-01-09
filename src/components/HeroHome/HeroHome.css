@@ -2,41 +2,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    min-height: 80vh;
     text-align: center;
-    background: radial-gradient(ellipse at bottom, var(--color-bg-soft) 0%, var(--color-bg) 100%);
     position: relative;
     overflow: hidden;
 }
 .seccionHero::before {
-    content: "";
-    position: absolute;
-    width: 180%;
-    height: 180%;
-    top: -40%;
-    right: -50%;
-    z-index: 0;
-    background: 
-        radial-gradient(ellipse at 75% 35%, rgba(47, 124, 204, 0.4) 0%, transparent 45%),
-        radial-gradient(ellipse at 85% 50%, rgba(74, 163, 255, 0.35) 0%, transparent 50%),
-        radial-gradient(ellipse at 65% 45%, rgba(35, 133, 95, 0.3) 0%, transparent 55%);
-    filter: blur(100px);
-    animation: aurora1 20s ease-in-out infinite alternate;
-}
-.seccionHero::after {
-    content: "";
-    position: absolute;
-    width: 160%;
-    height: 160%;
-    top: -30%;
-    right: -40%;
-    z-index: 1;
-    background: 
-        radial-gradient(ellipse at 80% 40%, rgba(44, 182, 125, 0.45) 0%, transparent 40%),
-        radial-gradient(ellipse at 70% 50%, rgba(102, 212, 157, 0.38) 0%, transparent 45%),
-        radial-gradient(circle at 85% 35%, rgba(44, 182, 125, 0.35) 0%, transparent 38%);
-    filter: blur(90px);
-    animation: aurora2 15s ease-in-out infinite alternate;
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 20%;
+  z-index: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(102, 212, 157, 0.18),
+    rgba(44, 182, 125, 0.06),
+    transparent 70%
+  );
+  filter: blur(40px);
+  pointer-events: none;
 }
 
 .contenidoTextImg::before {
@@ -169,4 +154,91 @@
     margin-top: var(--space-xl);
     position: relative;
     z-index: 3;
+}
+
+@media (max-width: 1024px) {
+    .contenidoTextImg {
+        width: 90%;
+        gap: var(--space-lg);
+    }
+
+    .textoHero h1 {
+        font-size: var(--font-size-2xl);
+    }
+
+    .textoHero p {
+        font-size: var(--font-size-sm);
+    }
+
+    .contenedorBotonesHero {
+        flex-wrap: wrap;
+    }
+
+    .contenidoTextImg::before {
+        width: 600px;
+        height: 600px;
+        top: -150px;
+        right: -150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .seccionHero {
+        min-height: auto;
+        padding: var(--space-xl) 0;
+    }
+
+    .contenidoTextImg {
+        flex-direction: column;
+        text-align: center;
+        width: 95%;
+    }
+
+    .textoHero {
+        max-width: 100%;
+    }
+
+    .textoHero h1 {
+        font-size: var(--font-size-xl);
+    }
+
+    .textoHero p {
+        font-size: var(--font-size-sm);
+    }
+
+    .imgHero {
+        margin-top: var(--space-lg);
+        max-width: 90%;
+    }
+
+    .contenedorBotonesHero {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    .contenidoTextImg::before {
+        width: 400px;
+        height: 400px;
+        filter: blur(50px);
+    }
+
+    .contenidoTextImg::after {
+        animation: none;
+        opacity: 0.6;
+    }
+}
+
+@media (max-width: 480px) {
+    .textoHero h1 {
+        font-size: 1.8rem;
+    }
+
+    .textoHero p {
+        font-size: 0.95rem;
+    }
+
+    .contenidoTextImg::before,
+    .seccionHero::before {
+        display: none;
+    }
 }
