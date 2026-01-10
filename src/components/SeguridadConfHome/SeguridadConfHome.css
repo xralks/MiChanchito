@@ -1,0 +1,191 @@
+.seccionSeguridadConf {
+  max-width: 1200px;
+  min-height: 80vh;
+  margin: 0 auto;
+  padding: var(--space-xl);
+  display: flex;
+  align-items: center;
+      position: relative;
+    z-index: 2;
+}
+
+.seccionSeguridadConf::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(44, 182, 125, 0.12) 0%, transparent 2%),
+        radial-gradient(circle at 80% 70%, rgba(74, 163, 255, 0.1) 0%, transparent 2%),
+        radial-gradient(circle at 40% 80%, rgba(102, 212, 157, 0.14) 0%, transparent 2%),
+        radial-gradient(circle at 90% 20%, rgba(44, 182, 125, 0.11) 0%, transparent 2%),
+        radial-gradient(circle at 60% 60%, rgba(107, 182, 255, 0.09) 0%, transparent 2%);
+    background-size: 400px 400px, 300px 300px, 350px 350px, 280px 280px, 320px 320px;
+    filter: blur(2px);
+    animation: particulasFlotantes 25s linear infinite;
+}
+
+.contenedorSeguridad {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.contenedorSeguridad h2 {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-lg);
+}
+
+.contenedorItemSeguridad {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-lg);
+}
+
+.itemSeguridad {
+  position: relative;
+  padding: var(--space-xl);
+  border-radius: var(--radius-medio);
+  background-color: color-mix(in srgb, var(--color-bg-alt) 70%, transparent);
+  backdrop-filter: blur(6px);
+  box-shadow: var(--sombra-media);
+  z-index: 1;
+}
+
+.itemSeguridad::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    180deg,
+    rgba(44,182,125,1),
+    rgba(0,0,0,0.08)
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.itemSeguridad h3 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-sm);
+}
+
+.itemSeguridad p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.contenedorBarraProgreso {
+  width: 500px;
+  position: relative;
+  border-radius: var(--radius-medio);
+  padding: var(--space-xl);
+  overflow: hidden;
+  background-color: color-mix(in srgb, var(--color-bg-alt) 70%, transparent);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: var(--space-sm);
+  box-shadow: var(--sombra-media);
+}
+
+.contenedorBarraProgreso::before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  top: -40%;
+  left: -40%;
+  z-index: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(44, 182, 125, 0.863),
+    rgba(0, 255, 149, 0.06),
+    transparent 70%
+  );
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.contenedorBarraProgreso::after{
+     content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.050) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.050) 1px,
+      transparent 1px
+    );
+  background-size: 60px 60px;
+  opacity: 0.3;
+  pointer-events: none; 
+}
+
+.labelProgreso {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.barraProgreso {
+  width: 100%;
+  height: 10px;
+  background-color: color-mix(in srgb, var(--color-border) 60%, transparent);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progreso {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(34,197,94,1),
+    rgba(22,163,74,1)
+  );
+  border-radius: 10px;
+  animation: cargarBarra 1.2s ease-out;
+}
+
+.porcentaje {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(34,197,94,1);
+  margin-bottom: var(--space-md);
+}
+
+@keyframes cargarBarra {
+  from {
+    width: 0%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contenedorSeguridad h2 {
+    font-size: var(--font-size-xl);
+    text-align: center;
+  }
+
+  .contenedorBarraProgreso {
+    max-width: 100%;
+  }
+}
