@@ -13,7 +13,7 @@ const HeroHome = () => {
                     <p>No dejes pasar estas oportunidades de ahorro.</p>
                     <div className="contenedorBotonesHero">
                         <a className="boton-primario" href="">comenzar ahora</a>
-                        <a className="boton-secundario" href="">ver más</a>
+                        <a className="boton-secundario" href="/Nosotros">ver más</a>
                     </div>
                 </div>
             </div>
