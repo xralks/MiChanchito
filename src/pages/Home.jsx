@@ -2,6 +2,7 @@ import HeroHome from "../components/HeroHome/HeroHome";
 import FuncionalidadesHome from "../components/FuncionalidadesHome/FuncionalidadesHome";
 import SeguridadConfHome from "../components/SeguridadConfHome/SeguridadConfHome";
 import FooterHome from "../components/FooterHome/FooterHome";
+import Footer from "../components/Footer/Footer";
 
 const Inicio = () => {
   return (
@@ -10,6 +11,7 @@ const Inicio = () => {
       <FuncionalidadesHome/>
       <SeguridadConfHome/>
       <FooterHome/>
+      <Footer/>
     </div>
   );
 };
