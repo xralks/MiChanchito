@@ -160,6 +160,7 @@
     .contenidoTextImg {
         width: 90%;
         gap: var(--space-lg);
+        margin-top: 55px;
     }
 
     .textoHero h1 {

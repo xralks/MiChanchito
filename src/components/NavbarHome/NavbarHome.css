@@ -1,0 +1,56 @@
+.navbarHome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(44, 182, 125, 0.01);
+    width: 100%;
+    backdrop-filter: blur(4px);
+    padding: 0 var(--space-md);
+    position: fixed;
+    z-index: 1000;
+}
+
+.navbarHomeLogo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    padding: 1rem 2rem;
+}
+
+.navbarHomeMenu {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.navbarHomeLogo svg {
+    width: 28px;
+    height: 28px;
+}
+
+.navbarHomeLogo a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: var(--font-weight-medium);
+    transition: color 0.3s ease;
+}
+
+.navbarHomeLogo a:hover {
+    color: var(--color-primary);
+    text-shadow: 0 0 12px rgba(44,182,125, 0.35);
+}
+
+@media (max-width: 390px) {
+    .navbarHomeLogo {
+        padding: 1rem;
+    }
+
+    .botonNavbarHome svg{
+        display: none !important;
+    }
+}
