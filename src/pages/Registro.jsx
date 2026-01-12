@@ -58,7 +58,7 @@ export const Registro = () => {
                 <div className="opcionesNavForm centro">
                     <div className="opcionNavForm">
                         <p>¿Ya tienes cuenta? </p>
-                        <a href="/Inicio-Sesion">Iniciar sesión</a>
+                        <a href="/Login">Iniciar sesión</a>
                     </div>
                 </div>
             </form>
