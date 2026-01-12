@@ -4,6 +4,7 @@ import Nosotros from '../pages/Nosotros.jsx'
 import Login from '../pages/Login.jsx'
 import Registro from '../pages/Registro.jsx'
 import Forgot_password from '../pages/forgot_password.jsx'
+import ResetPassword from '../pages/Reset_Password.jsx'
 
 export default function AppRoutes() {
   return (
@@ -13,6 +14,7 @@ export default function AppRoutes() {
       <Route path="/Login" element={<Login />} />
       <Route path="/Registro" element={<Registro />} />
       <Route path="/Recuperar-Contraseña" element={<Forgot_password />} />
+      <Route path="/Reset-Password" element={<ResetPassword />} />
     </Routes>
   )
 }
