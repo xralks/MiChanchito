@@ -31,6 +31,7 @@
 .containerGbForm h1 {
     font-size: var(--font-size-3xl);
     margin-bottom: var(--space-xl);
+    z-index: 1;
 }
 
 .containerGbForm a {
