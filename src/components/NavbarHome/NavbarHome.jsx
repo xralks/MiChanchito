@@ -9,7 +9,7 @@ const NavbarHome = () => {
                     MiChanchito</a>
                 </div>
                 <div className="botonNavbarHome">
-                    <a href="/Inicio-Sesion" className="boton-primario">
+                    <a href="/Login" className="boton-primario">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor"
