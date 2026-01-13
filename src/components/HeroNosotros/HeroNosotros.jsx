@@ -8,7 +8,7 @@ const HeroNosotros = () => {
                 <div className="hero-text">
                     <span className="hero-badge">Quiénes Somos</span>
                     <h1 className="hero-title">
-                        Transformando ideas en
+                        Transformando ideas en 
                         <span className="subrayado"> soluciones digitales</span>
                     </h1>
                     <p className="hero-description">
